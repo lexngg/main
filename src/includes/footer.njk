@@ -1,0 +1,59 @@
+<footer class="PageLayout-footer u-backgroundWhite u-borderTop u-borderUltraLight">
+  <div class="u-paddingVerticalLarge">
+    <div class="Container">
+      <div class="Grid">
+        <!-- menu: -->
+        <div class="u-sizeFull lg:u-size6of12 u-marginBottomSmall">
+          <ul class="u-flex u-marginNone u-paddingNone u-listStyleTypeNone">
+            {% if site.footerLinks %}
+
+              {% for item in site.footerLinks %}
+                {% set externalAttribute = '' %}
+
+                {% if item.external %}
+                  {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+                {% endif %}
+
+                <li>
+                  <a href="{{ item.url | url }}" {{ externalAttribute | safe }} >{{ item.text }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+        <!-- social links: -->
+        <div class="u-sizeFull lg:u-size6of12 u-marginBottomSmall">
+          <ul class="u-flex u-marginNone u-paddingNone u-listStyleTypeNone">
+            {% if site.socialLinks %}
+              {% for item in site.socialLinks %}
+                {% set externalAttribute = '' %}
+
+                {% if item.external %}
+                  {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+                {% endif %}
+
+                <li class="u-paddingLeftSmall">
+                  <a href="{{ item.url | url }}" {{ externalAttribute | safe }} >{{ item.text }}</a>
+                </li>
+              {% endfor %}
+            {% endif %}
+          </ul>
+        </div>
+      </div><!--/Grid-->
+      <!-- copyright: -->
+      <div class="u-textCenter u-text200">
+        &copy; 2021 {{ site.name | safe }}.
+      </div>
+    </div>
+  </div>
+
+  {% if site.showFooterAttribution %}
+    <div class="u-backgroundOpaline u-paddingVerticalExtraSmall">
+      <div class="Container">
+        <div class="u-textCenter u-text100 u-textGray">
+          Một sản phẩm của <a href="https://cleandesign.studio" target="_blank" title="">Clean Design Studio</a>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</footer>

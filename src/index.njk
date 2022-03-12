@@ -1,0 +1,330 @@
+---
+layout: master
+title: ''
+---
+
+<!-- Cover: -->
+<section class="u-backgroundPrimary u-textWhite u-paddingVerticalExtraLarge">
+  <div class="Container">
+    <div class="Grid u-alignItemsCenter">
+      <div class="u-sizeFull lg:u-size6of12 u-marginBottomLarge lg:u-marginBottomNone">
+        <div class="u-marginBottomExtraSmall">
+          <div class="u-flexInline u-text100 u-fontBold u-borderBottom u-borderSmall u-borderWhite u-marginBottomExtraSmall" style="word-spacing:3px">DỊCH VỤ THIẾT KẾ WEBSITE</div>
+        </div>
+        <h1 class="u-text700 lg:u-text800 u-fontBold u-marginBottomMedium">
+          <span class="u-inlineBlock u-marginRightTiny">Đơn giản.</span>
+          <span class="u-inlineBlock u-marginRightTiny">Chuyên nghiệp.</span>
+          <span class="u-inlineBlock u-marginRightTiny">Chi phí thấp.</span>
+          <span class="u-inlineBlock u-marginRightTiny">Hiệu quả cao!</span>
+        </h1>
+        <p class="u-text400 u-marginBottomMedium lg:u-marginBottomExtraLarge lg:u-paddingRightMedium">
+          Đơn giản hóa tối đa quy trình thiết kế website cho những <span class="u-textYellow100">người tự kinh doanh</span> & <span class="u-textYellow100">doanh nghiệp</span> nhỏ mới thành lập.
+          <!-- Bạn sẽ có thêm nhiều thời gian hơn để tập trung phát triển cơ sở kinh doanh của mình 🚀-->
+        </p>
+        <div class="u-flex u-alignItemsCenter u-marginBottomMedium">
+          <div class="u-flex u-alignItemsCenter u-justifyContentCenter u-widthMedium u-heightMedium u-backgroundWhite u-textPrimary u-roundedMedium u-marginRightSmall">
+            <ion-icon name="call"></ion-icon>
+          </div>
+          <div>
+            Gọi ngay <a href="tel:+84982997991" class="hover:u-textWarning" title="">0982-997-991</a> để được tư vấn
+          </div>
+        </div>
+      </div>
+      <div class="u-sizeFull lg:u-size6of12">
+        <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--4by3 u-roundedMedium u-shadowExtraLarge">
+          <img src="{{ '/images/family.jpg' | url }}" alt="Gia đình là tất cả!" class="Media-item">
+        </div>
+        <div class="u-text200 u-opacityHalf u-paddingTopExtraSmall u-textCenter">
+          Gia đình là tất cả. Nếu có thời gian, hãy dành cho gia đình!
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%
+  set data = [
+    {
+      "title": "1. Online mọi lúc, mọi nơi",
+      "description": "Trang web không biết đi ngủ, cũng không có ngày nghỉ lễ. Luôn sẵn sàng nói về thương hiệu của bạn cho bất cứ ai quan tâm, mọi lúc, mọi nơi.",
+      "image_url": "/images/why-website-1.jpg",
+      "image_alt": ""
+    },
+    {
+      "title": "2. Công cụ kết nối khách hàng",
+      "description": "Ngày nay, đa phần khách hàng đều tham khảo thông tin về bạn thông qua website trước khi thực hiện các hoạt động giao tiếp khác. Nếu không có trang web, bạn có nguy cơ đánh mất khách hàng rất cao.",
+      "image_url": "/images/why-website-2.jpg",
+      "image_alt": ""
+    },
+    {
+      "title": "3. Nâng cao hình ảnh thương hiệu",
+      "description": "Cơ sở kinh doanh của bạn còn bé, chưa có văn phòng khang trang? Đừng lo lắng yếu điểm về quy mô này. Hãy đầu tư một website chuyên nghiệp, khách hàng sẽ dễ dàng tin tưởng bạn hơn.",
+      "image_url": "/images/why-website-3.jpg",
+      "image_alt": ""
+    }
+  ]
+%}
+<section class="u-backgroundOpaline u-borderBottom u-borderUltraLight u-paddingVerticalExtraLarge">
+  <div class="Container">
+    <div class="u-marginBottomLarge">
+      <div class="u-marginBottomExtraSmall">
+        <div class="u-flexInline u-text100 u-fontBold u-textPrimary u-borderBottom u-borderSmall u-borderPrimary u-marginBottomExtraSmall" style="word-spacing:3px">HIỂU BIẾT</div>
+      </div>
+      <h2 class="u-fontMedium">Tầm quan trọng của website</h2>
+      <div class="u-marginTopSmall u-textGray">Website là một công cụ vô cùng hữu ích giúp doanh nghiệp hiện diện ở khắp nơi trên thế giới và kết nối với nhiều khách hàng tiềm năng.</div>
+    </div>
+    <div class="Grid u-marginBottomMedium">
+      {% for item in data %}
+      <div class="u-sizeFull lg:u-size4of12 u-marginBottomSmall lg:u-marginBottomNone">
+        <div class="u-heightFull u-backgroundWhite u-border u-borderUltraLight u-roundedMedium u-overflowHidden">
+          <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--16by9">
+            <img src="{{ item.image_url | url }}" alt="{{ item.image_alt }}" class="Media-item">
+          </div>
+          <div class="u-paddingSmall">
+            <div class="u-text400 u-fontMedium u-marginBottomExtraSmall">
+              {{ item.title }}
+            </div>
+            <p class="u-textGray">{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<section class="u-backgroundPrimary u-textWhite u-borderBottom u-borderUltraLight u-paddingVerticalExtraLarge">
+  <div class="Container">
+    <div class="Grid">
+      <div class="u-sizeFull lg:u-size8of12 u-marginBottomMedium lg:u-marginBottomNone">
+        <div class="u-flex u-flexColumn lg:u-flexRow">
+          <div class="u-text1200 lg:u-text1000 u-marginRightMedium u-textCenter">
+            <ion-icon name="diamond-outline"></ion-icon>
+          </div>
+          <div class="u-flexGrow1">
+            <div class="u-text400">
+              Đối với một cơ sở kinh doanh mới, việc xây dựng website là vô cùng quan trọng. Chúng tôi có giải pháp giúp bạn đạt được điều quan trọng theo cách không thể dễ dàng hơn!
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="u-sizeFull lg:u-size3of12 lg:u-offset1of12">
+        <div class="">
+          <a href="/dich-vu" class="Button Button--large u-widthFull u-flexInline u-justifyContentCenter u-alignItemsCenter u-textDecorationNone u-roundedMedium u-backgroundAccent hover:u-backgroundAccentDark u-border u-borderAccent hover:u-textDecorationNone u-cursorPointer u-textUppercase u-textWhite hover:u-textWhite">
+            <span class="Button-label u-inlineBlock u-fontMedium u-paddingHorizontalLarge">Liên hệ ngay</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%
+  set data = [
+    {
+      "name": "Chị Kim Anh",
+      "photo": "/images/customer-1.jpg",
+      "quote": "Tôi hoàn toàn đồng ý rằng có website giới thiệu là cần thiết. Nhưng hiện tại tôi muốn dành nhiều thời gian hơn để triển khai kế hoạch kinh doanh. Tôi chỉ có 1 mình nên rất bận, thành ra tôi không quản lý được website một cách thường xuyên.",
+      "job": "Tự kinh doanh Online",
+      "is_visible": true
+    },
+    {
+      "name": "Chị Hương Giang",
+      "photo": "/images/customer-2.jpg",
+      "quote": "Trước đây tôi đã từng thuê làm website có nhiều tính năng, tôi tự nhập nội dung được 2 tuần rồi bỏ bê vứt đó. Giờ nghe nói có nhiều dịch vụ cho phép tự tạo và quản lý web bằng cách kéo thả gì đó. Ôi chịu thôi... Nếu có thời gian tôi sẽ muốn đưa bé Chíp nhà tôi đi chơi cơ",
+      "job": "Chủ Spa",
+      "is_visible": true
+    },
+    {
+      "name": "Anh Thành Trung",
+      "photo": "/images/customer-3.jpg",
+      "quote": "Có một website quảng bá cho cửa hàng cà phê của riêng mình là mơ ước của tôi. Tôi đã từng tốn nhiều thời gian mò mẫm học code cơ bản để tự mình xây dựng website, để rồi phát hiện ra rằng, tôi không giỏi trong việc này.",
+      "job": "Chủ quán Cà phê tư nhân",
+      "is_visible": true
+    },
+    {
+      "name": "User",
+      "photo": "/images/customer-4.jpg",
+      "job": "Chu doanh nghiep nho",
+      "quote": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "is_visible": false
+    }
+  ]
+%}
+<section id="van-de" class="u-paddingVerticalExtraLarge">
+  <div class="Container">
+    <div class="u-marginBottomLarge">
+      <div class="u-marginBottomExtraSmall">
+        <div class="u-flexInline u-text100 u-fontBold u-textPrimary u-borderBottom u-borderSmall u-borderPrimary u-marginBottomExtraSmall" style="word-spacing:3px">VẤN ĐỀ</div>
+      </div>
+      <h2 class="u-fontMedium">Câu chuyện chung</h2>
+      <div class="u-marginTopSmall u-textGray">Bạn có thấy hình ảnh của mình thấp thoáng đâu đó trong những chia sẻ dưới đây?</div>
+    </div>
+    <div class="Grid u-marginBottomMedium">
+      {% for item in data %}
+        {% if item.is_visible %}
+        <div class="u-sizeFull lg:u-size4of12 u-marginBottomSmall lg:u-marginBottomLarge u-marginTopExtraLarge">
+          <div class="u-heightFull u-border u-borderLighter u-roundedMedium">
+            <div class="u-overflowHidden u-widthExtraLargePlus u-heightExtraLargePlus u-roundedCircle u-marginLeftMedium u-paddingTiny u-border u-backgroundWhite" style="margin-top:-48px;">
+              <img src="{{ item.photo | url }}" class="u-widthFull u-heightFull u-roundedCircle u-block" alt="{{ item.name }}" />
+            </div>
+            <div class="u-paddingMedium">
+              <div class="u-marginBottomMedium">"{{ item.quote | safe }}"</div>
+              <div class="u-marginBottomTiny">{{ item.name }}</div>
+              <div class="u-text200 u-textGray">{{ item.job }}</div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="u-marginBottomSmall">
+      <div class="u-textGray u-flex lg:u-alignItemsCenter">
+        Tổng hợp lại, chúng ta đang có 1 câu chuyện chung như sau:
+      </div>
+    </div>
+
+    <div class="u-paddingMedium u-marginBottomExtraLarge u-roundedMedium u-border u-borderUltraLight u-shadowExtraLarge">
+      <div class="u-paddingLeftSmall lg:u-paddingLeftMedium u-text400 lg:u-text500 u-borderLeft u-borderMedium u-borderPrimary" style="line-height: 1.75em">
+        Là <span class="u-backgroundIndigo50">người chủ bận rộn của một cơ sở kinh doanh nhỏ mới thành lập,</span> tôi cần <span class="u-backgroundGreen50">một cách quản lý website tiết kiệm thời gian và công sức</span>, nhờ đó tôi có <span class="u-backgroundYellow50">thêm thời gian tập trung vào hoạt động kinh doanh của mình hơn</span>.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="giai-phap" class="u-paddingVerticalExtraLargePlus u-backgroundPrimaryDark u-textWhite u-positionRelative">
+  <!-- background image: -->
+  <div class="u-backgroundPrimaryDark u-positionAbsolute u-positionFull" style="background: url('{{ '/images/solution.jpg' | url }}') no-repeat center center; background-size: cover; opacity: .1"></div>
+
+  <!-- content: -->
+  <div class="Container u-positionRelative">
+    <div class="u-marginBottomLarge">
+      <div class="u-marginBottomExtraSmall">
+        <div class="u-flexInline u-text100 u-fontBold  u-borderBottom u-borderSmall u-borderWhite u-marginBottomExtraSmall" style="word-spacing:3px">GIẢI PHÁP</div>
+      </div>
+      <h2 class="u-fontMedium">Đơn giản hóa tối đa quy trình thiết kế website</h2>
+      <div class="Grid">
+        <div class="u-sizeFull lg:u-size10of12">
+          <div class="u-marginTopSmall u-marginBottomMedium u-textWhite u-opacity75">"Thân lừa ưa nặng" là điều không nên xảy ra đối với những người chủ doanh nghiệp mới.</div>
+        </div>
+      </div>
+    </div>
+    <div class="Grid u-marginBottomMedium">
+      <div class="u-sizeFull lg:u-size6of12 u-marginBottomSmall lg:u-marginBottomLarge">
+        <div class="u-flex u-flexColumn u-heightFull u-backgroundWhite u-textDark u-roundedMedium u-overflowHidden">
+          <div class="u-paddingHorizontalMedium u-paddingVerticalSmall u-backgroundOpaline u-borderBottom">
+            <div class="u-fontBold">Giải pháp Truyền thống</div>
+          </div>
+          <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--4by3">
+            <img src="{{ '/images/maze-complex.jpg' | url }}" alt="" class="Media-item">
+          </div>
+          <div class="u-paddingMedium u-flexGrow1">
+            <div class="u-marginBottomExtraSmall u-paddingBottomExtraSmall u-borderBottom">
+              <strong class="u-backgroundLighter">Đặc điểm chung:</strong> Nhằm thu hút khách hàng, nhà phát triển luôn cố gắng đưa ra thật nhiều nhiều tính năng càng tốt, với nhiều mức giá khác nhau.
+            </div>
+            <div class="u-marginBottomExtraSmall u-paddingBottomExtraSmall u-borderBottom">
+              <strong class="u-backgroundPositiveLighter">Ưu điểm:</strong> Kho giao diện đa dạng. Khách hàng được tự do chỉnh sửa, thêm mới nội dung.
+            </div>
+            <div class="">
+              <strong class="u-backgroundNegativeLighter">Nhược điểm:</strong> Một ma trận các tính năng gây khó hiểu cho người dùng thông thường, đồng thời tốn thời gian vào việc quản lý website. Với các gói giá rẻ, giao diện trình bày chưa thể hiện được sự chuyên nghiệp.
+            </div>
+          </div></strong>
+          <div class="u-paddingMedium u-borderTop u-textGray u-backgroundOpaline">
+            Nếu muốn tiếp cận theo cách này, bạn có thể Google với từ khóa <a href="https://www.google.com/search?q=thi%E1%BA%BFt+k%E1%BA%BF+website+gi%C3%A1+r%E1%BA%BB&oq=thi%E1%BA%BFt+k%E1%BA%BF+website+gi%C3%A1+r%E1%BA%BB&aqs=edge..69i57j0i512j0i22i30l4j0i10i22i30j0i22i30l2.7749j0j4&sourceid=chrome&ie=UTF-8" target="_blank" rel="noopener noreferrer" class="">thiết kế website giá rẻ</a>. Có khá nhiều đối tác cho bạn lựa chọn.
+          </div>
+        </div>
+      </div>
+      <div class="u-sizeFull lg:u-size6of12 u-marginBottomSmall lg:u-marginBottomLarge">
+        <div class="u-flex u-flexColumn u-heightFull u-backgroundWhite u-textDark u-roundedMedium u-overflowHidden">
+          <div class="u-paddingHorizontalMedium u-paddingVerticalSmall u-backgroundOpaline u-borderBottom">
+            <div class="u-fontBold">Giải pháp của Chúng tôi</div>
+          </div>
+          <div class="Media u-positionRelative u-block u-paddingNone u-overflowHidden Media--4by3">
+            <img src="{{ '/images/maze-simple.jpg' | url }}" alt="" class="Media-item">
+          </div>
+          <div class="u-paddingMedium u-flexGrow1">
+            <div>
+              <div class="u-marginBottomSmall">
+                Giai đoạn đầu của quá trình khởi nghiệp luôn có hàng trăm thứ việc phải làm. Tiết kiệm thời gian và công sức cho bất kỳ đầu việc nào đều sẽ giúp rút ngắn chặng đường thành công của bạn hơn. Chúng tôi đơn giản hóa tối đa quy trình thiết kế website nhằm chia sẻ gánh nặng quản lý cùng bạn.
+              </div>
+              <div class="">
+                Kết hợp hài hòa giữa <strong class="u-backgroundPositiveLighter">ưu điểm</strong> và <strong class="u-backgroundNegativeLighter">nhược điểm</strong> của phương pháp truyền thống: Cắt giảm mọi thành phần, công đoạn không cần thiết. Tận dụng tối đa công nghệ mới và các nguồn lực có sẵn, giúp tiết kiệm thời gian, công sức và tiền bạc cho các nhà khởi nghiệp.
+              </div>
+            </div>
+          </div>
+          <div class="u-paddingMedium u-borderTop u-textGray u-backgroundOpaline">
+            <button class="Button Button--large u-widthFull u-flexInline u-justifyContentCenter u-alignItemsCenter u-textDecorationNone u-roundedMedium u-backgroundAccent hover:u-backgroundAccentDark u-border u-borderAccent hover:u-textDecorationNone u-cursorPointer u-textUppercase u-textWhite hover:u-textWhite">
+              <span class="Button-label u-inlineBlock u-fontMedium u-paddingHorizontalLarge">LIÊN HỆ NGAY</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%
+set data = [
+  {
+    "question": "Đơn giản có phải là cẩu thả?",
+    "answer": "Chúng tôi coi \"Đơn giản\" là ngăn nắp, gọn gàng, tiết kiệm công sức mà hiệu quả đạt được vẫn cao. \"Thiết kế Đơn giản\" nghĩa là đơn giản hóa quy trình làm việc để làm sao vẫn giữ được kết quả tối ưu nhất. Cẩu thả là sự bừa bộn, không có tính nhất quán, làm việc mà không tính đến kết quả về sau."
+  },
+  {
+    "question": "Question xyz...",
+    "answer": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "question": "Question xyz...",
+    "answer": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "question": "Question xyz...",
+    "answer": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  },
+  {
+    "question": "Question xyz...",
+    "answer": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+  }
+]
+%}
+<section class="u-paddingVerticalExtraLargePlus u-backgroundWhite">
+  <div class="Container u-positionRelative">
+    <div class="u-marginBottomLarge">
+      <div class="u-marginBottomExtraSmall">
+        <div class="u-flexInline u-text100 u-fontBold u-textPrimary u-borderBottom u-borderSmall u-borderPrimary u-marginBottomExtraSmall" style="word-spacing:3px">HỎI ĐÁP</div>
+      </div>
+      <h2 class="u-fontMedium">Câu hỏi thường gặp</h2>
+      {# <div class="u-marginTopSmall u-textGray">Bạn có thấy hình ảnh của mình trong những tâm sự dưới đây?</div> #}
+    </div>
+    <div class="Grid u-marginBottomMedium">
+      <div class="u-sizeFull lg:u-size8of12">
+        {% for item in data %}
+        <div class="u-text400 u-marginBottomMedium">
+          <h5 class="u-marginBottomTiny">
+            {{loop.index}}. {{ item.question | safe }}
+          </h5>
+          <div class="u-paddingLeftSmall u-borderLeft u-borderSmall u-textGray">
+            <p>{{ item.answer | safe }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{# <section class="u-paddingVerticalExtraLarge">
+  <div class="Container">
+    <h2 class="post-list__heading">Recent Posts</h2>
+
+    {% set postslist = collections.posts | head(-10) %}
+    {% include "posts-list.njk" %}
+
+    <div class="u-textCenter">
+      <a class="all-posts-link" href="{{ '/blog/' | url }}">View All Posts</a>
+    </div>
+  </div>
+</section> #}

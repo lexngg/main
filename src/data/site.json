@@ -1,0 +1,82 @@
+{
+  "name": "Thiết kế Đơn giản",
+  "description": "Giải pháp đơn giản giúp thương hiệu của bạn online nhanh chóng!",
+  "url": "https://cleandesignstudio.github.io/thietkedongian",
+  "favion": "/images/favicon.ico",
+  "themeColor": "#375de7",
+  "author": {
+    "name": "Do Tuan Phong",
+    "email": "mrtuanphong@gmail.com",
+    "twitterHandle": "author_handle"
+  },
+  "defaultSocialImage": "/images/default-social-image.png",
+  "headerLinks": [
+    {
+      "text": "Dịch vụ",
+      "url": "/dich-vu/",
+      "external": false
+    },
+    {
+      "text": "Blog",
+      "url": "/blog/",
+      "external": false
+    },
+    {
+      "text": "Giới thiệu",
+      "url": "/gioi-thieu/",
+      "external": false
+    },
+    {
+      "text": "Liên hệ",
+      "url": "/lien-he/",
+      "style": "button",
+      "button_style": "primary",
+      "external": false
+    }
+  ],
+  "socialLinks": [
+    {
+      "text": "Instagram",
+      "url": "https://instagram.com/",
+      "external": true
+    },
+    {
+      "text": "Twitter",
+      "url": "https://twitter.com/",
+      "external": true
+    },
+    {
+      "text": "Facebook",
+      "url": "https://facebook.com/",
+      "external": true
+    }
+  ],
+  "floatButtonLinks": [
+    {
+      "text": "Tìm đường",
+      "url": "/tim-duong",
+      "image": "/images/icon-map.svg",
+      "external": false
+    },
+    {
+      "text": "Gọi cho tôi",
+      "url": "tel:+0982997991",
+      "image": "/images/icon-call.svg",
+      "external": false
+    },
+    {
+      "text": "Chat ngay với tôi",
+      "url": "https://www.messenger.com/t/mrtuanphong",
+      "image": "/images/icon-messenger.svg",
+      "external": true
+    }
+  ],
+  "footerLinks": [
+    {
+      "text": "RSS",
+      "url": "/feed.xml",
+      "external": true
+    }
+  ],
+  "showFooterAttribution": true
+}

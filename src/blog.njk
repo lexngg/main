@@ -1,0 +1,25 @@
+---
+layout: master
+permalink: /blog/
+---
+
+<div class="u-paddingVerticalLarge u-backgroundPrimary u-textWhite">
+  <div class="Container">
+    <h1 class="u-text700 u-fontMedium u-marginBottomNone">Blog</h1>
+  </div>
+</div>
+<div class="Container">
+  <div class="tags u-borderBottom u-borderBottomLight u-paddingBottomExtraSmall">
+    {% include "tags-list.njk" %}
+  </div>
+</div>
+<div class="u-paddingBottomExtraLarge">
+  <div class="Container">
+    <div class="Grid">
+      <div class="u-sizeFull lg:u-size8of12">
+        {% set postslist = collections.posts %}
+        {% include "posts-list.njk" %}
+      </div>
+    </div>
+  </div>
+</div>
