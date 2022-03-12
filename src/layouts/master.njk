@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href={{ page.url | url | absoluteUrl(site.url) }}>
+
+    {% bundledcss %}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>
+      {{  title  | escape }}
+      {% if title %}
+         | {{ site.name }}
+      {% else %}
+        {{ site.name }}
+      {% endif %}
+    </title>
+
+    <link rel="icon" type= “image/x-icon” href="{{ site.favion | url }}">
+
+    <meta name="theme-color" content="{{ site.themeColor }}">
+    <meta property="og:title" content="{{  title or site.name | escape }}">
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ site.url + page.url }}"/>
+    <meta name="twitter:card" content="summary_large_image">
+
+    {% if site.author.twitterHandle %}
+      <meta name="twitter:creator" content="@{{ site.author.twitterHandle | replace('@', '') }}"/>
+    {% endif %}
+
+    {% set desc = description %}
+    {% if not desc %}
+      {% set desc = content | striptags | truncate(140) %}
+    {% endif %}
+    {% if desc %}
+      <meta name="description" content="{{ desc | escape  }}">
+      <meta property="og:description" content="{{ desc | escape }}">
+      <meta name="description" content="{{ desc | escape }}"/>
+    {% endif %}
+
+    {% if not socialImage %}
+      {% set socialImage = site.defaultSocialImage %}
+    {% endif %}
+    {% if socialImage %}
+      <meta property="og:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
+      <meta name="twitter:image" content="{{ socialImage | url | absoluteUrl(site.url) }}"/>
+    {% endif %}
+
+    {# Add mermaid -- start #}
+      <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+      <script>mermaid.initialize({startOnLoad:true});</script>
+    {# Add mermaid -- end #}
+  </head>
+  <body class="">
+    <div class="PageLayout u-screenHeightFull u-flex u-flexColumn">
+      <!-- page header: -->
+      {% include "header.njk" %}
+
+      <!-- page body: -->
+      <main class="PageLayout-body u-flexGrow1">
+        {# <p>{{ page.url }}</p> #}
+        {{ content | safe }}
+
+        {% include "banner-bottom.njk" %}
+      </main>
+
+      <!-- page footer: -->
+      {% include "footer.njk" %}
+
+      <!-- float buttons: -->
+      {% include "float-buttons.njk" %}
+    </div>
+
+    <!-- jQuery: -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ionicons: -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    {% bundledjs %}
+  </body>
+</html>

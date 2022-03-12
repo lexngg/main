@@ -1,0 +1,44 @@
+{# <header class="PageLayout-header u-backgroundWhite u-positionSticky u-positionTop u-shadowMedium u-zIndex5">
+  <div class="Container">
+    <div class="u-flex u-flexColumn lg:u-flexRow u-alignItemsCenter">
+      <div class="u-flex u-text600 u-fontBold">
+        <a href={{ "/" | url }} class="u-block u-textDecorationNone hover:u-textDecorationNone u-paddingTopSmall lg:u-paddingVerticalSmall" style="word-spacing:-1px">
+          {{site.name}}
+        </a>
+      </div>
+
+      {% if site.headerLinks %}
+        <nav class="nav lg:u-marginLeftAuto u-text200 lg:u-text300 u-maxWidthFull u-overflowHorizontalAuto">
+          <ul class="u-flex u-marginNone u-paddingNone u-listStyleTypeNone">
+            {% for item in site.headerLinks %}
+              {% set currentAttribute = '' %}
+              {% set externalAttribute = '' %}
+              {% set currentPageCssClassName = '' %}
+
+              {% if item.external %}
+                {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+              {% endif %}
+
+              {% if page.url == item.url %}
+                {% set currentAttribute = 'aria-current="page"' %}
+                {% set currentPageCssClassName = 'u-textUnderline  u-textDark' %}
+              {% endif %}
+
+              <li class="u-paddingNone u-marginNone">
+                <a
+                  href="{{ item.url | url }}"
+                  {{ currentAttribute | safe }} {{ externalAttribute | safe }}
+                  class="u-block u-fontMedium u-textDecorationNone u-textNoWrap u-textGray hover:u-textDark hover:u-textDecorationNone u-paddingHorizontalExtraSmall u-paddingVerticalSmall"
+                  >
+                    <span class="{{currentPageCssClassName}}">{{ item.text }}</span>
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+
+      {% endif %}
+
+    </div>
+  </div>
+</header> #}

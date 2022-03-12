@@ -1,0 +1,48 @@
+{# <div class="u-positionFixed u-positionBottom u-positionRight">
+  <div class="u-marginRightSmall u-marginBottomSmall">
+    <!-- full: -->
+    <div id="floatButtonFull" style="display:none;">
+      <div class="u-flex u-flexColumn u-alignItemsCenter">
+        {% for item in site.floatButtonLinks %}
+          {% set externalAttribute = '' %}
+
+          {% if item.external %}
+            {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+          {% endif %}
+
+          <a
+            href="{{ item.url }}" {{ externalAttribute | safe }}
+            title="{{ item.text }}"
+            class="u-flex u-backgroundWhite u-widthExtraLarge u-heightExtraLarge u-roundedCircle u-paddingExtraSmall u-marginBottomExtraSmall u-shadowLarge"
+          >
+            <img src="{{ item.image | url }}" class="u-widthFull u-heightFull" alt="{{ item.text }}" />
+          </a>
+        {% endfor %}
+
+        <!-- close button: -->
+        <div
+          role="button"
+          title="Đóng"
+          class="u-flex u-alignItemsCenter u-justifyContentCenter u-textNegative u-border u-borderLarge u-bor u-backgroundWhite u-widthExtraLarge u-heightExtraLarge u-roundedCircle u-paddingExtraSmall u-marginBottomMediumss"
+          onclick="$('#floatButtonShort, #floatButtonFull').toggle();"
+        >
+          <ion-icon name="close" class="u-widthMediumsss" size="large"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <!-- short: -->
+    <div id="floatButtonShort">
+      <div class="u-flex">
+        <div
+          role="button"
+          class="u-flex u-backgroundWhite u-widthExtraLarge u-heightExtraLarge u-roundedCircle u-paddingExtraSmall u-shadowLarge"
+          onclick="$('#floatButtonShort, #floatButtonFull').toggle();"
+          title="Hỗ trợ"
+        >
+          <img src="{{ '/images/icon-support.svg' | url }}" class="u-widthFull u-heightFull" alt="Hỗ trợ" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div> #}

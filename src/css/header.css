@@ -1,0 +1,27 @@
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: var(--text-base);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.nav__list a {
+  /* color: rgb(117, 117, 117);
+  text-decoration: none; */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.nav__list li {
+  margin-right: 2rem;
+}
+
+.nav__list li:last-child {
+  margin-right: 0;
+}
+
+.nav__list a:hover {
+  /* color: rgb(41, 41, 41); */
+}
